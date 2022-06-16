@@ -1,5 +1,6 @@
-package com.riverside.commons.model.dao;
+package com.riverside.commons.model.dao.writing;
 
+import com.riverside.commons.model.dao.DocumentObject;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NonNull;
@@ -10,23 +11,25 @@ import java.util.Collections;
 import java.util.List;
 
 @Data
-public class Series extends DocumentObject {
+public class Universe extends DocumentObject {
     @Id
-    private String seriesId;
+    private String universeId;
     @NonNull
     private String title;
     @NonNull private String slug;
-    @NonNull private String universeId;
+    @NonNull private String description;
     @DBRef
-    private List<Book> books;
+    private List<Series> series;
 
     @Builder
-    public Series(String userId, String universeId, String title, String slug) {
+    public Universe(String universeId, String title, String slug, String userId, String description) {
         super(userId);
 
         this.universeId = universeId;
         this.title = title;
         this.slug = slug;
-        this.books = Collections.emptyList();
+        this.description = description;
+
+        this.series = Collections.emptyList();
     }
 }

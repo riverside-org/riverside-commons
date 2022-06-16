@@ -1,5 +1,6 @@
-package com.riverside.commons.model.dao;
+package com.riverside.commons.model.dao.writing;
 
+import com.riverside.commons.model.dao.DocumentObject;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NonNull;
