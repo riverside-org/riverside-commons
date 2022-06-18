@@ -4,7 +4,7 @@ import lombok.Data;
 import org.springframework.data.annotation.Id;
 
 @Data
-public class ServiceRequest {
+public class ServiceResponse {
     @Id
     private String transactionId;
     private String email;
