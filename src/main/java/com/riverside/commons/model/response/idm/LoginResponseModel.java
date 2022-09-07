@@ -9,12 +9,12 @@ import lombok.ToString;
 @Setter
 @ToString
 public class LoginResponseModel extends GenericResponse {
-    private String email;
+    private String userId;
     private String sessionId;
 
-    public LoginResponseModel(int resultCode, String message, String email, String sessionId) {
+    public LoginResponseModel(int resultCode, String message, String userId, String sessionId) {
         super(resultCode, message);
-        this.email = email;
+        this.userId = userId;
         this.sessionId = sessionId;
     }
 }
